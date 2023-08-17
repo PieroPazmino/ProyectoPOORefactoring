@@ -141,19 +141,15 @@ cambios*/
 //metodos para actualizar la informacion. privados
     private void cambiarNombreUrbanizacion(){
         System.out.println("Ingrese nuevo nombre: ");
-        
-        String nombre= entra.nextLine().toUpperCase();
-        setNombre(nombre);
+        setNombre(entra.nextLine().toUpperCase());
     }
     private void cambiarEtapaUrbanizacion(){
         System.out.println("Ingrese el numero de la etapa: ");
-        int etapa= entra.nextInt();
-        setEtapa(etapa);
+        setEtapa(entra.nextInt());
     }
     private void cambiarCorreoUrbanizacion(){
         System.out.println("Ingrese nuevo correo: ");
-        String correo= entra.next();
-        setEmail(correo);
+        setEmail(entra.next());
     }
     private void cambiarAdminUrbanizacion(){
         System.out.println("Ingrese la cedula del nuevo administrador: ");

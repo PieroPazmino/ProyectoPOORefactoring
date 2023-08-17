@@ -10,7 +10,6 @@ import Usuarios.Persona;
 
 public class Visitante extends Persona {
     private String empresa;
-    private Estado estado;
     private ArrayList <String> sanciones= new ArrayList();
     
     private ArrayList <Persona> personas= Persona.getListaPersonas();
@@ -26,7 +25,6 @@ public class Visitante extends Persona {
         super(nombre, email, cedula, telefono);
         this.empresa = empresa.toUpperCase();
         this.sanciones = sanciones;
-        this.estado= estado;
     }
     //setters y getters
     public ArrayList<String> getSanciones() {
@@ -98,10 +96,7 @@ public class Visitante extends Persona {
    }
     
     //Cambia a inactivo el estado del visitante
-    @Override
-    public void eliminarme(){
-        setEstado(Estado.INACTIVO);
-    }
+
     //herencia de modificarDatos
     @Override
     public void modificarDatos(){

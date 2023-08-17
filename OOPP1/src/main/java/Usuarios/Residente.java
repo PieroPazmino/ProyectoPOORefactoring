@@ -13,7 +13,6 @@ public class Residente extends Persona {
     private int villa;
     private final int habitantes=1;
     private String urbanizacion;
-    private Estado estado; 
     private ArrayList <Permiso> permisos= new ArrayList();
     
     private ArrayList <Persona> personas= Persona.getListaPersonas();
@@ -96,12 +95,7 @@ public class Residente extends Persona {
             System.out.println(per);
         }
     }
-    //cambia el estado a Inactivo. eliminacion del residente.
-    @Override
-    public void eliminarme(){
-        this.setEstado(Estado.INACTIVO);
-    }
-    
+
     /*El residente es el que crea el permiso, por eso tiene su 
     arrayList de permisos, puede crear varios */
     public void crearPermiso(){

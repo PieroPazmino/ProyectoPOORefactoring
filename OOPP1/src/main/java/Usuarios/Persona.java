@@ -13,6 +13,12 @@ public class Persona {
     private String email;
     private String cedula;
     private String telefono;
+    protected Estado estado;
+    
+    //metodo que será heredado para cambiar el estado a inactivo.
+    public void eliminarme(){ 
+    	setEstado(Estado.INACTIVO);
+    }
     
     private static ArrayList <Persona> personas= new ArrayList();
     //constructor 1
@@ -56,6 +62,9 @@ public class Persona {
     }
     public static ArrayList getListaPersonas(){
         return personas;
+    }
+    public void setEstado(Estado estado) {
+    	this.estado = estado;
     }
     ///
    
@@ -104,9 +113,7 @@ public class Persona {
         setEmail(definirEmail());
         setTelefono(definirTelefono());
     }
-    //metodo que será heredado para cambiar el estado a inactivo.
-    public void eliminarme(){ 
-    }
+
     @Override
     public String toString() {
         return "nombre= " + nombre + ", email= " + email + 

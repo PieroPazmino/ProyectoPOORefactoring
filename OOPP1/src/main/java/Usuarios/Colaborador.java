@@ -9,13 +9,13 @@ import java.time.LocalDateTime;
 public class Colaborador extends Persona {
     private String puestoTrabajo;
     private Empleo tipoempleado;
-    private Estado estado;
     private LocalDate fechaInicioActividades;
     private LocalDate fechaFinActividades;
    
     private static ArrayList <Colaborador> colaboradores = new ArrayList();
     private ArrayList <Persona> personas= Persona.getListaPersonas();
     private Scanner entra= new Scanner (System.in);
+    
     
     //Constructor 1
     public Colaborador(){
@@ -191,12 +191,6 @@ public class Colaborador extends Persona {
                 + "((DD/MM/YY): ");
         setFechaFinActividades(definirFecha());
     }
-    //Polimorfismo de eliminarme. estado Inactivo
-    @Override
-    public void eliminarme(){
-        setEstado(Estado.INACTIVO);
-    }
-    
     
     @Override
     public String toString() {
